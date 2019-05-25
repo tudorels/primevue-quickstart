@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+      <InputText type="text" v-model="text" />
+      <Button type="button" @click="greet" label="Submit" />
+      <h3>{{message}}</h3>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    data() {
+        return {
+            message: null,
+            text: null
+        }
+    },
+    methods: {
+        greet() {
+            this.message = 'Hello ' + this.text;
+        }
+    }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.main {
+    padding-top: 10em;
+    text-align: center;
+}
+
+input {
+    margin-right: 1em;
 }
 </style>
