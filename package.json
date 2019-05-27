@@ -19,6 +19,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.5.21",
+    "primevue": "1.0.0-beta.1",
     "primeicons": "1.0.0"
   }
 }

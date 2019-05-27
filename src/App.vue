@@ -26,8 +26,7 @@ export default {
 
 <style scoped>
 .main {
-    padding-top: 10em;
-    text-align: center;
+    padding: 2em;
 }
 
 input {
