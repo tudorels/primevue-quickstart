@@ -3,6 +3,7 @@
       <InputText type="text" v-model="text" />
       <Button type="button" @click="greet" label="Submit" />
       <h3>{{message}}</h3>
+      <Toast />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ export default {
     },
     methods: {
         greet() {
+            this.$toast.add({severity: 'info', summary: 'Hello'  + this.text});
             this.message = 'Hello ' + this.text;
         }
     }
